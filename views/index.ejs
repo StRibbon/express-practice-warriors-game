@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Warrior's Team Game</title>
+</head>
+<body>
+	<h1>Go Warriors!</h1>
+
+	<form action="/playersadded">
+	   Please enter the jersey # of the player you would like to add:
+		<input type="text" name="id">
+	
+	<button type = "submit">submit</button>
+	</form>
+
+	<h4>TEAM ROSTER</h4>
+	<div>
+	<% players.forEach(function(player){ %>
+		<img src="<%= player.img %>" width="150px" alt="">
+	<%=player.name %> : <%= player.position %>
+	<% })%>
+	</div>
+
+
+</body>
+</html>
